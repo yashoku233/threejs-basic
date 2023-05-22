@@ -5,6 +5,7 @@
 
 <script>
 import { ThreeEngine } from './js/TEngine'
+import { allBaseObject } from './js/TBaseObject'
 
 export default {
   name: 'HelloWorld',
@@ -14,7 +15,9 @@ export default {
     }
   },
   mounted() {
-      this.ThreeEngine = new ThreeEngine(this.$refs.threeTarget)
+      this.ThreeEngine = new ThreeEngine(this.$refs.threeTarget);
+      console.log(allBaseObject,'allBaseObject')
+      this.ThreeEngine.addObject(...allBaseObject);
     }
 }
 </script>
