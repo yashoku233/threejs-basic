@@ -47,6 +47,7 @@ export class ThreeEngine {
     let transformControls = new TransformControls(camera, renderer.domElement)
     scene.add(transformControls) // 将变换控制器添加至场景
     
+    // 首先设置一个变量里面加入 
     let transing = false
     transformControls.addEventListener("mouseDown", () => {
       transing = true
